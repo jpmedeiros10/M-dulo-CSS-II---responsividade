@@ -1,0 +1,171 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", sans-serif;
+}
+
+.wrapper {
+    /*Ocupando a tela inteira*/
+    height: 100vh;
+    width: 100vw;
+}
+
+.container-left {
+    display: inline-block;
+    width: 60%;
+    /*Diz que o conteudo da esquerda está ocupando 60% da largura da tela inteira*/
+    margin-left: 136px;
+    margin-top: 15%;
+}
+
+.container-right {
+    display: inline-block;
+    background-color: rgba(93, 93, 125, 0.16);
+    /*ao deixar opaco, todos iam ficar opacos, incluindo imagem e os links, mas ai esse background deixou apenas o fundo opaco*/
+    height: 100vh;
+    /*Diz que o conteudo está ocupado 100% de altura da tela em seu eixo*/
+    width: 40%;
+    /*Diz que o conteudo da direita vai ocupar os 40% da tela restantes*/
+    position: absolute;
+}
+
+img {
+    position: relative;
+    /*Como ele pertence ao container-rigth, as alterações de posição serão em relação a ele*/
+    top: 25%;
+    right: 130px;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    color: #5d5d7d;
+    width: 368px;
+}
+
+p {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 48px;
+    color: #5d5d7d;
+    opacity: 0.3;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 540px;
+}
+
+button {
+    width: 269px;
+    height: 62px;
+    background: #9499ea;
+    box-shadow: 0px 10px 24px rgba(148, 153, 234, 0, 097);
+
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+    /*Ficar mais opaco quando o cursor passar nele*/
+}
+
+button:active {
+    opacity: 0.5;
+    /*Para dar impressão de que realmente foi clicado*/
+}
+
+a {
+    font-size: 28px;
+    line-height: 41px;
+    color: #5d5d7d;
+    margin-right: 41px;
+    cursor: pointer;
+}
+
+a:nth-child(2) {
+    opacity: 0.4;
+}
+
+a:hover{
+    opacity: 0.4;
+}
+
+a:active {
+    opacity: 0.5;
+}
+
+header {
+    margin: 24px 0 0 57px;
+}
+
+
+
+
+/* responsividade afirmando que: quando a lateral chegar em 900px ele comece a realizar as alterações*/
+@media screen and (max-width: 900px) {
+    .container-left {
+        width: 100%; /*vai ocupar toda largura da tela*/
+        
+        height: 50%; /*vai ocupar metade da altura da tela*/
+        
+        /*vai deixar tela no ponto zero*/
+        margin: 0;
+        padding: 0;
+    }
+
+    .container-right {
+        display: block; /*Para que ele não fique do lado, e sim embaixo*/
+        height: auto; /*Auto para que seja oque restou, automatico*/
+        width: 100%; /*vai ocupar toda largura da tela*/
+        position: static; /*Posição padrão*/
+        padding: 40px;
+        
+    }
+
+    img {
+        position: static;
+        max-width: 90%; /*Chegou nesse número fazendo testes no "inspeção"*/
+        
+    }
+
+    header {
+        display: none; /*Fazer o header sumir*/
+        
+    }
+
+    h1 {
+        font-size: 36px;
+        line-height: 52px;
+        width: auto; /*Se adaptar com as alterações*/
+        margin: 58px 50px 0 50px;
+        text-align: center; /*Texto em centro*/
+    }
+
+    p {
+        margin: 15px 40px;
+        width: auto; /*Se adaptar com as alterações*/
+        text-align: center; /*Texto em centro*/
+        font-size: 14px;
+        line-height: 24px;
+
+    }
+
+    button {
+        margin: 0 auto; /*Em cima e embaixo não vai ter, e dos lados vai ser automatico (vai ficar automaticamente no centro*/
+        display: block; /*Como pertence ao container-left, ele estava como display: inline-block*/
+    }
+}
+
+/*Para telefones bem menores*/
+@media screen and (max-width: 380px) {
+    .container-left {
+        height: 65%;
+    }
+}
