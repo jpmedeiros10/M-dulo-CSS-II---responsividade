@@ -22,8 +22,8 @@
 <br>
 <h2 font-wize=400>🛠️ Tecnologias Utilizadas</h2>
 <lu>
-  <li>HTML5</li>
-  <li>CSS3</li>
+ <li> <img src="https://img.shields.io/badge/HTML-239120?style=for-the-badge&logo=html5&logoColor=white" alt="html-logo"</img> </li>
+ <li> <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css-logo"</img> </li>
 </lu>
 
 <br>
